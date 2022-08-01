@@ -30,7 +30,6 @@ class Solution {
         
         int inIndex = ioMap.get(root.val);
 
-        
         root.left = builder(preStart+1, inStart, inIndex-1, preorder, inorder, ioMap);
         root.right = builder(preStart + inIndex - inStart + 1, inIndex+1, inEnd, preorder, inorder, ioMap);
         
